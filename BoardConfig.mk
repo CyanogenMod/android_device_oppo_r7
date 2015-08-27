@@ -19,6 +19,7 @@ FORCE_32_BIT := true
 include device/oppo/msm8939-common/BoardConfigCommon.mk
 
 # Kernel
+BOARD_RAMDISK_OFFSET := 0x02000000
 TARGET_KERNEL_CONFIG := msm8916_defconfig
 
 # Partitions
