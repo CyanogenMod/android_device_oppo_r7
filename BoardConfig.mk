@@ -18,11 +18,14 @@ FORCE_32_BIT := true
 
 include device/oppo/msm8939-common/BoardConfigCommon.mk
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := r7,r7f
+
 # Kernel
 BOARD_RAMDISK_OFFSET := 0x02000000
 TARGET_KERNEL_CONFIG := msm8916_defconfig
 
-# Partitions
+# Partition info
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_CACHEIMAGE_PARTITION_SIZE := 134217728
