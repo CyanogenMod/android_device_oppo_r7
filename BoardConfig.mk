@@ -21,7 +21,7 @@ include device/oppo/msm8939-common/BoardConfigCommon.mk
 DEVICE_PATH := device/oppo/r7
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := r7,r7f
+TARGET_OTA_ASSERT_DEVICE := r7,r7f,R7f
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
