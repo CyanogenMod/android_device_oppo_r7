@@ -30,4 +30,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=OPPO/R7f/R7f:4.4.4/KTU84P/1427451688:user/release-keys \
-    PRIVATE_BUILD_DESC="msm8916_32-user 4.4.4 KTU84P eng.root.20150626 release-keys"
+    PRIVATE_BUILD_DESC="msm8916_32-user 4.4.4 KTU84P eng.root.20150626 release-keys" \
+    TARGET_DEVICE="R7f"
