@@ -30,6 +30,14 @@ PRODUCT_COPY_FILES += \
 
 # ACDB Loader calibration
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/acdbdata/Bluetooth_cal.acdb:system/etc/acdbdata/15011/Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/General_cal.acdb:system/etc/acdbdata/15011/General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/Global_cal.acdb:system/etc/acdbdata/15011/Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/Handset_cal.acdb:system/etc/acdbdata/15011/Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/Hdmi_cal.acdb:system/etc/acdbdata/15011/Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/Headset_cal.acdb:system/etc/acdbdata/15011/Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/Speaker_cal.acdb:system/etc/acdbdata/15011/Speaker_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/WorkspaceFile.qwsp:system/etc/acdbdata/15011/WorkspaceFile.qwsp \
     $(LOCAL_PATH)/audio/acdbdata/MTP/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     $(LOCAL_PATH)/audio/acdbdata/MTP/MTP_General_cal.acdb:system/etc/acdbdata/MTP/MTP_General_cal.acdb \
     $(LOCAL_PATH)/audio/acdbdata/MTP/MTP_Global_cal.acdb:system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
