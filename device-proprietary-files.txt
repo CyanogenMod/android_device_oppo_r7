@@ -1,0 +1,3 @@
+# Touchscreen
+etc/firmware/tp/15011/15011_FW_S3508_Tpk.img
+etc/firmware/tp/15011/15011_Limit_Tpk.img
