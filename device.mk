@@ -63,6 +63,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libpath=/vendor/lib/libril-qc-qmi-1.so
+
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
