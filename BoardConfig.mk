@@ -31,6 +31,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Kernel
 BOARD_DTBTOOL_ARGS := --force-v2
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x02000000
 TARGET_KERNEL_CONFIG := cyanogenmod_r7_defconfig
 
