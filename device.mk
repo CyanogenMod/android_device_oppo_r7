@@ -76,6 +76,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.target=dpm1 \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 
 # Wifi
