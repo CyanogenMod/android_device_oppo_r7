@@ -270,9 +270,7 @@ vendor/lib/libxml.so
 
 # Sensors
 bin/psensord
-vendor/lib/libcalmodule_akm.so
 vendor/lib/libcalmodule_memsic.so
-vendor/lib/libcalmodule_yamaha.so
 
 # Signed Venus (media) firmware
 etc/firmware/venus.b00
