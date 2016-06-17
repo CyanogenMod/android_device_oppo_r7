@@ -106,15 +106,6 @@ etc/firmware/cpp_firmware_v1_4_0.fw
 vendor/lib/libmmcamera_ov8858_15011.so
 vendor/lib/libmmcamera_s5k3m2_15011.so
 
-# GPS
--lib/libloc_api_v02.so
--lib/libloc_ds_api.so
-vendor/lib/hw/flp.default.so
-vendor/lib/libflp.so
-vendor/lib/libgeofence.so
-vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
-
 # Media
 lib/libOmxVdecHevc.so
 vendor/lib/libDivxDrm.so
