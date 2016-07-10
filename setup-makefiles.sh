@@ -1,13 +1,35 @@
 #!/bin/bash
 
+COMMON=msm8939-common
 DEVICE=r7
 VENDOR=oppo
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
+YEAR=`date +"%Y"`
+
+function write_bloblist() {
+    local LINEEND=" \\"
+    local COUNT=`cat $1 | uniq | egrep -c -v '(^-|^#|^$)'`
+    for FILE in `egrep -v '(^-|^#|^$)' $1 | uniq`; do
+      COUNT=`expr $COUNT - 1`
+      if [ $COUNT = "0" ]; then
+          LINEEND=""
+      fi
+      # Split the file from the destination (format is "file[:destination]")
+      local OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
+      local FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
+      local DEST=${PARSING_ARRAY[1]}
+      if [ -n "$DEST" ]; then
+          FILE=$DEST
+      fi
+      echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
+    done
+}
+
 (cat << EOF) > $MAKEFILE
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) $YEAR The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,29 +48,10 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 PRODUCT_COPY_FILES += \\
 EOF
 
-LINEEND=" \\"
-COUNT=`wc -l proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' proprietary-files.txt`
-COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
-  COUNT=`expr $COUNT - 1`
-  if [ $COUNT = "0" ]; then
-    LINEEND=""
-  fi
-  # Split the file from the destination (format is "file[:destination]")
-  OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
-  if [[ ! "$FILE" =~ ^-.* ]]; then
-    FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
-    DEST=${PARSING_ARRAY[1]}
-    if [ -n "$DEST" ]; then
-      FILE=$DEST
-    fi
-    echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
-  fi
-done
+write_bloblist proprietary-files.txt
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) $YEAR The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -87,7 +90,7 @@ PRODUCT_PACKAGES += \\
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) $YEAR The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -105,7 +108,7 @@ EOF
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/Android.mk
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) $YEAR The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -218,3 +221,5 @@ include \$(BUILD_PREBUILT)
 endif
 
 EOF
+
+../../$VENDOR/$COMMON/setup-makefiles.sh
