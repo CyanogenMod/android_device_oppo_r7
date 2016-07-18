@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+FORCE_32_BIT := true
+
 LOCAL_PATH := device/oppo/r7
 
 # Overlay
