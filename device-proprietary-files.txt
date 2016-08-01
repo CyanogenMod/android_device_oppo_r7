@@ -1,0 +1,56 @@
+# Audio
+etc/firmware/left.tfa9890.config
+etc/firmware/left.tfa9890.speaker
+etc/firmware/left.tfa9890_music_table.eq
+etc/firmware/left.tfa9890_music_table.preset
+etc/firmware/left.tfa9890_n1c2.patch
+etc/firmware/left.tfa9890_voice_table.eq
+etc/firmware/left.tfa9890_voice_table.preset
+
+# Camera
+vendor/lib/libimage_stability.so
+
+# Camera autofocus
+vendor/lib/libactuator_dw9800w_15062_camcorder.so
+vendor/lib/libactuator_dw9800w_15062_camera.so
+vendor/lib/libactuator_dw9800w_15062.so
+
+# Camera chromatix
+vendor/lib/libchromatix_ov8858_15011_common.so
+vendor/lib/libchromatix_ov8858_15011_default_video.so
+vendor/lib/libchromatix_ov8858_15011_liveshot.so
+vendor/lib/libchromatix_ov8858_15011_preview_binding.so
+vendor/lib/libchromatix_ov8858_15011_preview_fb.so
+vendor/lib/libchromatix_ov8858_15011_preview.so
+vendor/lib/libchromatix_ov8858_15011_small_video.so
+vendor/lib/libchromatix_ov8858_15011_snapshot_fb.so
+vendor/lib/libchromatix_ov8858_15011_snapshot.so
+vendor/lib/libchromatix_s5k3m2_15011_common_panorama.so
+vendor/lib/libchromatix_s5k3m2_15011_common.so
+vendor/lib/libchromatix_s5k3m2_15011_default_video.so
+vendor/lib/libchromatix_s5k3m2_15011_hfr_120fps.so
+vendor/lib/libchromatix_s5k3m2_15011_hfr_60fps.so
+vendor/lib/libchromatix_s5k3m2_15011_hfr_90fps.so
+vendor/lib/libchromatix_s5k3m2_15011_liveshot.so
+vendor/lib/libchromatix_s5k3m2_15011_preview_panorama.so
+vendor/lib/libchromatix_s5k3m2_15011_preview.so
+vendor/lib/libchromatix_s5k3m2_15011_small_video.so
+vendor/lib/libchromatix_s5k3m2_15011_snapshot_panorama.so
+vendor/lib/libchromatix_s5k3m2_15011_snapshot.so
+vendor/lib/libchromatix_s5k3m2_15011_video_hd.so
+vendor/lib/libchromatix_s5k3m2_15011_zsl.so
+
+# Camera eeprom
+vendor/lib/libmmcamera_sunny_f13s01l_eeprom.so
+
+# Camera sensors
+vendor/lib/libmmcamera_ov8858_15011.so
+vendor/lib/libmmcamera_s5k3m2_15011.so
+
+# Sensors
+bin/psensord
+vendor/lib/libcalmodule_memsic.so
+
+# Touchscreen
+etc/firmware/tp/15011/15011_FW_S3508_Tpk.img
+etc/firmware/tp/15011/15011_Limit_Tpk.img
