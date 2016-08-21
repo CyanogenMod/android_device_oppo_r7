@@ -1,11 +1,11 @@
-# Audio - from stock, converted
-etc/firmware/left.tfa9890.config|aedbb9f65ae19cd309f329620c39b5070f7916f0
-etc/firmware/left.tfa9890.speaker|b5b98161b9e4c342a13f8ed722f81b4686fa99f3
-etc/firmware/left.tfa9890_music_table.eq|37ba5c37a780da67c5845faca57b58940c6ae5a0
-etc/firmware/left.tfa9890_music_table.preset|a4e10390547aa95a8ff99aace1a962932c41d35c
-etc/firmware/left.tfa9890_n1c2.patch|581d987516c4678149bcd72d13eff2f89391fb6e
-etc/firmware/left.tfa9890_voice_table.eq|a7c2e3c1ed410dcebedb0da074f88193f2620f67
-etc/firmware/left.tfa9890_voice_table.preset|f91c36787abf3b3d3e4245030b39f63f3d342cd8
+# Audio - from stock, eq converted
+etc/tfa9890/settings/TFA9890_N1B12_N1C3_v2.config:etc/firmware/left.tfa9890.config
+etc/tfa9890/settings/15011/TFA9890_1111.speaker:etc/firmware/left.tfa9890.speaker
+etc/tfa9890/settings/15011/NHQ_0_0_TFA9890_1111.eq:etc/firmware/left.tfa9890_music_table.eq|37ba5c37a780da67c5845faca57b58940c6ae5a0
+etc/tfa9890/settings/15011/NHQ_0_0_TFA9890_1111.preset:etc/firmware/left.tfa9890_music_table.preset
+etc/tfa9890/settings/TFA9890_N1C3_1_7_1.patch:etc/firmware/left.tfa9890_n1c2.patch
+etc/tfa9890/settings/15011/Speech_0_0_TFA9890_1111.eq:etc/firmware/left.tfa9890_voice_table.eq|a7c2e3c1ed410dcebedb0da074f88193f2620f67
+etc/tfa9890/settings/15011/Speech_0_0_TFA9890_1111.preset:etc/firmware/left.tfa9890_voice_table.preset
 
 # Camera
 vendor/lib/libimage_stability.so
